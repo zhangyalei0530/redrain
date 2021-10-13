@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>吉利红包雨</title>
+    <meta name="description" itemprop="description" content="技术吉利真囯六 亿元红包真惠民-吉利更多政策优惠待你解锁中…">
+    <meta name="keywords" content="" />
+    <meta content="all" name="robots" />
+    <meta itemprop="image" content="https://static.yiche.com/www/zhuanti/adtopic/js/share_logo.jpg">
+    <meta itemprop="name" content="">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/donghua.css">
+    <link rel="stylesheet" type="text/css" href="css/loadings.css">
+    <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script src="//h5ych.m.yiche.com/activity/Common/GetBitautoAppInfo" type="text/javascript"></script>
+    <script>
+        //因绝对定位+margin百分比定位在UC中有BUG，翻屏页面建议使用rem单位
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (clientWidth < 320) {
+                        docEl.style.fontSize = 50 + 'px'
+                    } else if (clientWidth > 750) {
+                        docEl.style.fontSize = 100 + 'px'
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        var globalVar = {
+            apiDomain: "//localhost:31851/",
+            countDownTime: 30,//倒计时,
+            getAppSource: function () {
+                return BitautoAppInfo.SOURCE;
+            },
+            is_weixin: function () {
+                var ua = navigator.userAgent.toLowerCase();
+                if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                    return true;
+                } else {
+                    return false;
+                }
+            },
+        };
+
+    </script>
+    <style>
+        .win_tip {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            font-size: 12px;
+        }
+    </style>
+    <!-- qdka02 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?18ee89f433d067f2e847eecfafd01e2c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- miaozhen -->
+    <script>
+        (function (a, e, f, g, b, c, d) {
+            a.ClickiTrackerName = b;
+            a[b] = a[b] || function () { (a[b].queue = a[b].queue || []).push(arguments) };
+            a[b].start = +new Date; c = e.createElement(f); d = e.getElementsByTagName(f)[0];
+            c.async = 1; c.src = g; d.parentNode.insertBefore(c, d)
+        })(window, document, 'script', '//stm-cdn.cn.miaozhen.com/clicki.min.js?v=' + Math.round(new Date().getTime() / 1000 / 300), 'stm_clicki');
+        stm_clicki('create', 'dc-3119', 'auto');
+        stm_clicki('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <!-- <div class="win_tip"></div> -->
+    <!-- 游戏页 -->
+    <div id="game"></div>
+    <!-- 倒计时 -->
+    <div class="tipsPage">
+        <div class="daoshu_num hide"><img src="images/daoshu3.png" /></div>
+    </div>
+    <!-- 游戏结果页 -->
+    <div class="resultPage hide">
+
+        <div class="bg"><img src="images/result_bg.jpg"></div>
+        <img src="images/guanming.png" class="guanming" alt="">
+        <!-- 现金中奖页面 -->
+        <div class="money_box">
+            <h6><span></span>恭喜您获得<span></span></h6>
+            <h3>66元现金红包 兑换码为</h3>
+            <h1 class="dhm_txt">SH1305582393</h1>
+            <P>请关注“易车优惠精选”公众号</P>
+            <p>在对话框中输入兑换码即可领取现金红包</p>
+            <a href="javascript:;" class="share_btn" onclick="stm_clicki('send', 'event', '分享按钮', 'Click', '中奖页分享', 1);">
+                <img src="images/share_btn.png" alt="">
+            </a>
+        </div>
+        <!-- 谢谢参与页面 -->
+        <div class="canyu_box">
+            <img src="images/cry_icon.gif" class="cry_icon" alt="">
+            <h3>
+                <span class="q_num" style="font-weight:bold;font-size:0.4rem;position:relative;top:0rem; ">好可惜，差一点就中奖了</span>
+            </h3>
+            <a href="javascript:;" class="share_btn" onclick="stm_clicki('send', 'event', '分享按钮', 'Click', '谢谢参与分享', 1);"><img src="images/share_btn.png" alt=""></a>
+        </div>
+
+        <!-- 合成海报 -->
+        <a class="hc_btn" href="javascript:;" onclick="stm_clicki('send', 'event', '按钮', 'Click', '生成海报', 1);"></a>
+
+        <!-- 专题页跳转 -->
+        <a class="bjc_box" href="http://www.bitauto.com/topics/ad_topic/Geely_hongbao_190620_m/" onclick="stm_clicki('send', 'event', '按钮', 'Click', '了解更多', 1);"></a>
+    </div>
+    <!-- 合成海报 -->
+    <div class="swiper-container-all abs section4 hide">
+        <div id="compound">
+            <div class="tip_txt">长按图片保存相册分享朋友圈</div>
+            <img src="" class="cimg" alt=""  onclick="stm_clicki('send', 'event', '图片', 'Click', '保存海报', 1);"/>
+            <div class="bottomimgbg">
+                <img src="images/data-pic01.jpg" class="" alt="" />
+            </div>
+            <a href="javascript:;" class="fanhui" onclick="stm_clicki('send', 'event', '按钮', 'Click', '海报页返回按钮', 1);"><img src="images/fanhui.png" alt="" /></a>
+        </div>
+    </div>
+    <!-- 微信分享页面-->
+    <div class="sharePage hide">
+        <div class="share_arrbox">
+            <div class="share_arr up_with_down_anim"><img src="images/share_arr.png"></div>
+        </div>
+    </div>
+    <!-- 移动端分享页面-->
+    <div class="m-sharePage hide">
+        <div class="m-share_box">
+            <a href="javascript:void(0)" class="y-close">
+                <img src="images/y-close.png" alt="">
+            </a>
+            <div class="share_arr m-share"><img src="images/m-share.jpg" class="androidpic"></div>
+            <p class="mshare_copy">
+                发送好友扫描二维码<br>
+                <span>百万福利&nbsp;正在派发</span>
+            </p>
+        </div>
+    </div>
+    <div class="pop-panel center-pop tip-pop">识别失败，请重新尝试</div>
+    <div class="mask-layer"></div>
+
+    <!-- 活动结束页 -->
+    <!-- 活动结束后执行act_end() -->
+    <div class="act_end">
+        <p>当前活动已结束</p>
+        <h1>敬请期待下一次活动</h1>
+        <a href="javascript:;" onclick="stm_clicki('send', 'event', '切换', 'Click', '活动结束返回主会场', 1);"
+           class="zhc_btn">返回主会场</a>
+    </div>
+
+  
+    <script type="text/javascript" src="js/chumo.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="https://h5ych.m.yiche.com/app/weixinfeixiang.js"></script>
+    <script type="text/javascript"
+            src="//img1.bitautoimg.com/brandmarket/yichehuinew/m/js/h5tool/h5tools.2.1.1.js"></script>
+    <!-- 分享 -->
+    <script type="text/javascript" src="js/fenxiang.js"></script>
+    <script type="text/javascript" src="js/phaser.min.20181023.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
+    <script type="text/javascript" src="js/game20190115.js"></script>
+    <script type="text/javascript" src="js/mainscript20190116.js"></script>
+    <script type="text/javascript" src="js/tips_pop.js"></script>
+
+    <!--大数据-->
+    <script type="text/javascript" src="//g.yccdn.com"></script>
+    <!--DL-->
+    <script type="text/javascript" src="//datalab.mai.yiche.com/js/dc"></script>
+    <script type="text/javascript" src="//datalab.mai.yiche.com/v3/js/dc"></script>
+    <!--易车检测-->
+    <script type="text/javascript" src="//image.bitautoimg.com/bt/webtrends/dcs_tag.js"></script>
+    <script type="text/javascript">
+        //iwt stat艾瑞统计代码
+        (function (G, D, s, c, p) {
+            c = {
+                UA: "UA-bitauto-000001",
+                NO_FLS: 0,
+                WITH_REF: 1,
+                API_URL: "//bitauto.irs01.com/irt?",
+                URL: '//img1.bitautoimg.com/stat/iwt-min20151127.js'
+            };
+            G._iwt ? G._iwt.track(c, p) : (G._iwtTQ = G._iwtTQ || []).push([c, p]), !G._iwtLoading && lo();
+
+            function lo(t) {
+                G._iwtLoading = 1;
+                s = D.createElement("script");
+                s.src = c.URL;
+                t = D.getElementsByTagName("script");
+                t = t[t.length - 1];
+                t.parentNode.insertBefore(s, t);
+            }
+        })(this, document);
+    </script>
+
+    <script type="text/javascript">
+        var bitautoskweburl = "//www.bitauto.com/zhuanti/adtopic/webapisk/JsConfig20150504/JsCommon20150504/";
+        document.write('<scri' + 'pt src=' + bitautoskweburl + 'config.js type="text/javascript"></s' + 'cript>');
+        document.write('<scri' + 'pt src=' + bitautoskweburl + 'skcommon.js type="text/javascript"></s' + 'cript>');
+
+        var adDate = new Date();
+        var dateVersion = adDate.getFullYear().toString() + (adDate.getMonth() + 1).toString() + adDate.getDate().toString() + adDate.getHours().toString() + (parseInt((new Date()).getMinutes() / 1)).toString();
+        document.write('<scri' + 'pt src=' + bitautoskweburl + 'limiting.js?t=' + dateVersion + ' type="text/javascript"></s' + 'cript>');
+    </script>
+
+    <script type="text/javascript" src="//ip.bitauto.com/iplocation/setcookie.ashx"></script>
+    <script src="common/base_market.js" type="text/javascript"></script>
+    <script src="common/dealer.js" type="text/javascript"></script>
+    <script src="common/public_mode.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//g.yccdn.com"></script>
+    <!-- 微信分享 -->
+    <script src="https://www.bitauto.com/zhuanti/adtopic/webapisk/JsConfig/wx/wx_base.js" type="text/javascript"></script>
+    <script src="js/wx_method.js" type="text/javascript"></script>
+    <!--<script src="common/vconsole.min.js"></script>-->
+<script>
+    $(document).ready(function () {
+        // panduan cookies,没有跳回index.html
+        // window.onload=startGame;
+    //    startGame();
+
+        var recId = GetCookie('recid' + ActivitiesID);
+        if (recId != null & recId != undefined) {
+            var presult = GetCookie('presult' + recId);
+            //, escapeStr(_public_ismonneydiv + "-" + _public_code + "-" + _public_prizename + "-" + _public_q_num)
+            if (presult != null && presult != undefined) {
+                var presultList = unescape(presult).split("-");
+                _public_ismonneydiv = presultList[0];
+                _public_code = presultList[1];
+                _public_prizename = presultList[2];
+                _public_q_num = presultList[3];
+                popPrizeDiv();
+            }
+            else {
+                startGame();
+            }
+
+        }
+        else {
+            location.href = "index.html";
+            
+        }
+    })
+</script>
+</body>
+
+</html>
